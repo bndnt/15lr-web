@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section>
+<div class="reaction">
+    <div class="container">
+        <div class="reaction__inner">
+            <a class="reaction__link" id="over" target="_blank" onmouseover="M_over(this)"  href="https://habr.com/ru/" >
+                over mouse on
+                <p class="reaction__link-text" id="pp">
+
+                </p>
+            </a>
+
+        </div>
+    </div>
+</div>
+</section>
+<section>
+    <div class="event">
+        <div class="container">
+            <div class="content_inner" onmouseover="b2()">
+<form>
+                    <p>
+                        Что было 11 сентябряя 2001 гоода ?</p>
+
+                        <input   class="content__form-item content__form-item-1" id="content__item" type="checkbox" name="a" value="18">
+                        <span class="item-span fir">Я родился</span><br>
+                        <input  class="content__form-item content__form-item-2" id="content__form-item-2" type="checkbox" name="a" value="18-21" >
+                       <span class="item-span two">Вторая мировая<br></span>
+
+                        <input  class="content__form-item content__form-item-4" id="content__form-item-3" type="checkbox" name="a" value="30-49">
+                       <span class="item-span th">Террористические акты</span> <br>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+
+    function M_over(element) {
+        let  href = element.href;
+        let pp = document.getElementById('pp');
+         document.getElementById('pp').innerHTML=href;
+    }
+
+    let b=document.getElementById('content__item');
+    b.addEventListener("click",showAlert );
+    function showAlert(){
+        alert('chacked');
+    }
+
+    let bb=document.getElementById('content__form-item-2');
+    bb.addEventListener("click",showAlerts );
+    function showAlerts(){
+        alert('chacked');
+    }
+
+    let bbb=document.getElementById('content__form-item-3');
+    bbb.addEventListener("click",showAlertt );
+    function showAlertt(){
+        alert('chacked');
+    }
+
+    let m=document.getElementById('content__item');
+        m.addEventListener("mouseover", function showBigger(event){
+        console.log(1);
+        let item =  document.querySelector('.item-span.fir').setAttribute('style', 'color: violet');
+
+    });
+
+    m.addEventListener("mouseout", function showBigger(event){
+        console.log(1);
+        let item =  document.querySelector('.item-span.fir').setAttribute('style', 'font-size: 15px');
+    });
+
+    let ms=document.getElementById('content__form-item-2');
+        ms.addEventListener("mouseover", function showBigger(event){
+        console.log(1);
+        let item =  document.querySelector('.item-span.two').setAttribute('style', 'color: violet');
+
+    });
+
+    ms.addEventListener("mouseout", function showBigger(event){
+        console.log(1);
+        let item =  document.querySelector('.item-span.two').setAttribute('style', 'font-size: 15px');
+    });
+
+    let mt=document.getElementById('content__form-item-3');
+        mt.addEventListener("mouseover", function showBigger(event){
+        console.log(1);
+        let item =  document.querySelector('.item-span.th').setAttribute('style', 'color: violet');
+
+    });
+
+    mt.addEventListener("mouseout", function showBigger(event){
+        console.log(1);
+        let item =  document.querySelector('.item-span.th').setAttribute('style', 'font-size: 15px');
+    });
+
+    // function b2() {
+    //     form = document.querySelector("form"), // выбираем первый элемент ol в документе
+    //         input = form.querySelectorAll("input"); // выбираем все элементы li в первoм элементe ol
+    //     input.forEach(function(elem) { // проходим все элементы коллекции
+    //         elem.addEventListener("mouseover", function(){this.style.color = "mediumpurple";
+    //             this.style.fontSize = "24px";
+    //             this.style.fontStyle = "italic";
+    //         })
+    //     })
+    //     input.forEach(function(elem) {
+    //         elem.addEventListener("mouseout", function(){this.style.color = "black";
+    //             this.style.fontSize = "20px";
+    //             this.style.fontStyle = "normal";
+    //         })
+    //     })
+    //
+    //     input.forEach(function(elem) { // проходим все элементы коллекции
+    //         elem.addEventListener("click", function(){
+    //             alert('checked');
+    //         })
+    //     })
+    // }
+</script>
+
+</body>
+</html>
